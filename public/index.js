@@ -32,7 +32,7 @@
   async function makeMove() {
     if (toMove === playerId) {
       try {
-        const pos = this.id.split("_");
+        const pos = this.id.split("x");
         const url = `/move?gameid=${gameId}&playerid=${playerId}&row=${pos[0]}&col=${pos[1]}`;
         let response = await fetch(url);
         response = await statusCheck(response);
@@ -74,8 +74,8 @@
           playerId = response.playerId;
           updateBoard(response.state);
           setInterval(fetchState, FETCH_INTERVAL);
-          document.getElementById("start_view").classList.add("hidden");
-          document.getElementById("game_view").classList.remove("hidden");
+          document.getElementById("start-view").classList.add("hidden");
+          document.getElementById("game-view").classList.remove("hidden");
         } else {
           handleError("Game full!");
         }
@@ -115,7 +115,7 @@
         } else {
           char = "‎‎‎‏‏‎ ‎";
         }
-        document.getElementById(`${i}_${j}`).textContent = char;
+        document.getElementById(`${i}x${j}`).textContent = char;
       }
     }
 
