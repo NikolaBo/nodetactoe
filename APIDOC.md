@@ -2,7 +2,7 @@
 The API provides game mechanics for tic tac toe
 
 ## Start a game
-**Request Format:** /start?id=yourid
+**Request Format:** /start
 
 **Request Type:** GET
 
@@ -31,25 +31,67 @@ The API provides game mechanics for tic tac toe
 **Error Handling:**
 400 if invalid/missing id
 
-## *Fill in Endpoint 2 Title*
-**Request Format:** *Fill in example request format*
+## Play a move
+**Request Format:** /move
 
-**Request Type:** *Fill in request type*
+**Request Type:** GET
 
 **Returned Data Format**: JSON
 
-**Description:** *Fill in description*
+**Description:** Make a move
 
-**Example Request:** *Fill in example request*
+
+**Example Request:** /move?gameid=test&playerid=2&row=0&col=0
 
 **Example Response:**
-*Fill in example response in the {}*
-
-```json
+```
 {
-
+  "full": true,
+  "board": [[2,0,0],[0,0,0],[0,0,0]],
+  "toMove" :1,
+  "won":0,
+  "movesPlayed":1
+}
 }
 ```
 
-**Error Handling:**
-*Fill in an example of the error handling*
+## Get board state
+**Request Format:** /state
+
+**Request Type:** GET
+
+**Returned Data Format**: JSON
+
+**Description:** Retreive the current game status
+
+
+**Example Request:** /state?id=mygame
+
+**Example Response:**
+```
+{
+  "full": true,
+  "board": [[2,0,0],[0,0,0],[0,0,0]],
+  "toMove" :1,
+  "won":0,
+  "movesPlayed":1
+}
+}
+```
+
+## Get open games
+**Request Format:** /games
+
+**Request Type:** GET
+
+**Returned Data Format**: Text
+
+**Description:** Retrieve a list of joinable games
+
+
+**Example Request:** /games
+
+**Example Response:**
+```
+game1 game2 game3 game4
+```

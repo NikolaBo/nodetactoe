@@ -9,47 +9,47 @@
 <!doctype html>
 
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8">
 
-        <title>Node Tac Toe</title>
-        <meta name="description" content="Fun game!!!!!">
-        <meta name="author" content="Nikola Bojanic">
+    <title>Node Tac Toe</title>
+    <meta name="description" content="Fun game!!!!!">
+    <meta name="author" content="Nikola Bojanic">
 
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="stylesheet" href="styles.css">
-        <script src="index.js"></script>
-    </head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+  </head>
 
-    <body>
-        <main>
-            <section id="start_view">
-                <label for="game_id">Create or join game with ID:</label>
-                <input id="game_id" type="text">
-                <button>Start!</button>
-                <p>
-                    <strong>Open Games:</strong>
-                    <span id="open"></span>
-                </p>
-            </section>
-            <section id="game_view" class="hidden">
-                <h1>Node Tac Toe</h1>
-                <h2>You are Player <span id="you"></span></h2>
-                <h3>Currently playing: Player <span id="current"></span></h3>
-                <div id="grid">
-                    <div id="0_0">x</div>
-                    <div id="0_1">o</div>
-                    <div id="0_2"></div>
-                    <div id="1_0">x</div>
-                    <div id="1_1">o</div>
-                    <div id="1_2"></div>
-                    <div id="2_0"></div>
-                    <div id="2_1">x</div>
-                    <div id="2_2"></div>
-                </div>
-                <p id="over" class="hidden">Game Over! <span id="win"></span></p>
-            </section>
-            <p id="error" class="hidden"></p>
-        </main>
-    </body>
+  <body>
+    <main>
+      <section id="start-view">
+        <label for="game-id">Create or join game with ID:</label>
+        <input id="game-id" type="text">
+        <button>Start!</button>
+        <p>
+          <strong>Open Games:</strong>
+          <span id="open"></span>
+        </p>
+      </section>
+      <section id="game-view" class="hidden">
+        <h1>Node Tac Toe</h1>
+        <h2>You are Player <span id="you"></span></h2>
+        <h3>Currently playing: Player <span id="current"></span></h3>
+        <div id="grid">
+            <div id="0-0">x</div>
+            <div id="0-1">o</div>
+            <div id="0-2"></div>
+            <div id="1-0">x</div>
+            <div id="1-1">o</div>
+            <div id="1-2"></div>
+            <div id="2-0"></div>
+            <div id="2-1">x</div>
+            <div id="2-2"></div>
+        </div>
+        <p id="over" class="hidden">Game Over! <span id="win"></span></p>
+      </section>
+      <p id="error" class="hidden"></p>
+    </main>
+  </body>
 </html>
