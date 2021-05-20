@@ -33,7 +33,7 @@
     if (toMove === playerId) {
       try {
         const pos = this.id.split("x");
-        const url = `/move?gameid=${gameId}&playerid=${playerId}&row=${pos[0]}&col=${pos[1]}`;
+        const url = `/move?gameid=${gameId}&playerid=${playerId}&row=${pos[1]}&col=${pos[2]}`;
         let response = await fetch(url);
         response = await statusCheck(response);
         response = await response.json();
@@ -115,7 +115,7 @@
         } else {
           char = "‎‎‎‏‏‎ ‎";
         }
-        document.getElementById(`${i}x${j}`).textContent = char;
+        document.getElementById(`x${i}x${j}`).textContent = char;
       }
     }
 
