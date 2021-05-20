@@ -1,0 +1,105 @@
+/*
+  Name: Nikola Bojanic
+  Date: Wed May 19 2021
+  Section: CSE 154 AF
+  This page provides styling for the tic tac toe client
+*/
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+label {
+  display: block;
+  font-size: 1.25rem;
+}
+
+label, p {
+  padding: 0 0.25rem 0 0.25rem;
+}
+
+input {
+  width: 24rem;
+  padding: 10px;
+  box-sizing: border-box;
+  height: 3rem;
+  font-size: 1.25rem;
+  margin: 0.5rem 0 0.5rem 0;
+  border-radius: 1rem;
+  box-shadow: 0rem 0.15rem 0.5rem 0.1rem black;
+}
+
+p {
+  width: 30rem;
+  margin: 0 0.2rem 0 0.2rem;
+}
+
+button {
+  min-width: 6rem;
+  padding: 10px;
+  height: 3rem;
+  font-size: 1.25rem;
+  margin: 0.5rem 0 0.5rem 0;
+  border-radius: 1rem;
+  background-color: ghostwhite;
+  box-shadow: 0rem 0.075rem 0.25rem 0.05rem black;
+}
+
+input:focus {
+  outline: none;
+}
+
+.hidden {
+  display: none;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.1rem;
+  margin-top: 0.25rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.1rem;
+  margin-top: 0.2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  margin-top: 0;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 20rem;
+  height: 20rem;
+  box-shadow: 0.1rem 0.1rem 1rem 0.25rem black;
+}
+
+#grid div {
+  border: 0.001rem solid lightslategray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+#game_view p {
+  margin-top: 1rem;
+}
+
+#error {
+  color: red;
+}

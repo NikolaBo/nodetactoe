@@ -1,27 +1,35 @@
-# *FILL IN NAME* API Documentation
-*Fill in a short description here about the API's purpose.*
+# Node Tac Toe API Documentation
+The API provides game mechanics for tic tac toe
 
-## *Fill in Endpoint 1 Title*
-**Request Format:** *Fill in example request format*
+## Start a game
+**Request Format:** /start?id=yourid
 
-**Request Type:** *Fill in request type*
+**Request Type:** GET
 
-**Returned Data Format**: Plain Text
+**Returned Data Format**: JSON
 
-**Description:** *Fill in description*
+**Description:** Start a game
 
 
-**Example Request:** *Fill in example request*
+**Example Request:** /start?id=test
 
 **Example Response:**
-*Fill in example response in the ticks*
-
 ```
-
+{
+  "joined": true,
+  "state": {
+    "full": false,
+    "board": [[0,0,0],[0,0,0],[0,0,0]],
+    "toMove" :2,
+    "won":0,
+    "movesPlayed":0
+  },
+  "playerId": 1
+}
 ```
 
 **Error Handling:**
-*Fill in an example of the error handling*
+400 if invalid/missing id
 
 ## *Fill in Endpoint 2 Title*
 **Request Format:** *Fill in example request format*
